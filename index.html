@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroVerse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AstroVerse</h1>
+    </header>
+
+    <main>
+        <section class="concept" id="black-holes">
+            <h2>Black Holes</h2>
+            <p>Black holes are regions of spacetime exhibiting gravitational acceleration so strong that nothing can escape from it.</p>
+            <a href="https://www.youtube.com/watch?v=e-P5IFTqB98" target="_blank">Watch Video</a>
+            <div class="animation"> <!-- 3D animation placeholder --> </div>
+        </section>
+
+        <section class="concept" id="neutron-stars">
+            <h2>Neutron Stars</h2>
+            <p>Neutron stars are the collapsed cores of massive stars that exploded in supernovae.</p>
+            <a href="https://www.youtube.com/watch?v=TWz8uQVto-Q" target="_blank">Watch Video</a>
+            <div class="animation"> <!-- 3D animation placeholder --> </div>
+        </section>
+
+        <section id="upload-section">
+            <h2>Upload Your Astronomy Images</h2>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="submit" value="Upload Image" name="submit">
+            </form>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
