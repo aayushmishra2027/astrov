@@ -95,3 +95,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+function search() {
+    const query = document.getElementById('search-input').value;
+    fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${query}&format=json&origin=*`)
+        .then(response => response.json())
+        .then(data => {
+            const results = data.query.search;
+            const resultsContainer = document.getElementById('results-container');
+            resultsContainer.innerHTML = '';
+
+            if (results.length > 0) {
+                results.forEach(result => {
+                    const resultDiv = document.createElement('div');
+                    resultDiv.classList.add('result');
+                    resultDiv.innerHTML = `
+                        <h3>${result.title}</h3>
+                        <p>${result.snippet}</p>
+                        <a href="https://en.wikipedia.org/wiki/${result.title}" target="_blank">Learn more</a>
+                    `;
+                    resultsContainer.appendChild(resultDiv);
+                });
+                document.getElementById('search-results').style.display = 'block';
+            } else {
+                resultsContainer.innerHTML = '<p>No results found.</p>';
+                document.getElementById('search-results').style.display = 'block';
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching search results:', error);
+        });
+}
