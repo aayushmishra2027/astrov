@@ -48,8 +48,6 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-
-
 main {
     padding: 20px;
 }
@@ -206,7 +204,6 @@ footer p {
     flex-wrap: wrap;
     gap: 10px;
 }
-}
 
 .animation {
     width: 400px;
@@ -217,6 +214,64 @@ footer p {
 
 #upload-section {
     margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+    #search-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ffa500;
+}
+
+#search-results {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+    #search-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ffa500;
+}
+
+#search-results {
+    margin-top: 20px;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.5);
 }
